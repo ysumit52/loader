@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <link rel="stylesheet" href="css/style3.css">
+    <title>Demo: Knight Preloader 3</title>
+</head>
+<body>
+  <div id="loader-wrapper">
+        <div class="outer"></div>
+        <div class="inner">
+            <span id="span-text"> Click Here</span>
+        </div>
+  </div>
+  <script>
+      let count = 0;
+    document.getElementsByClassName("inner")[0].addEventListener('click', () => {
+        let intervalId = setInterval(() => {
+            count = count + 10;
+            document.getElementById('span-text').innerText  = count + " %";
+            if(count >= 100){
+                clearInterval(intervalId);
+            }
+        }, 1000)
+    })
+    </script> 
+</body>
+
+</html>

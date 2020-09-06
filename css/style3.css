@@ -1,0 +1,51 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+
+#loader-wrapper{
+    height: 100vh;
+    display: flex;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    background-color: #240f52;;
+}
+
+.outer{
+    width: 25vh;
+    height: 25vh;
+    background: linear-gradient(135deg, #FEED07 0%, #FE6A50 5%, #ED00AA 15%, #2FE3FE 50%, #8900FF 100%);
+    border-radius: 50%;
+    animation: spinOuter 2s linear infinite;
+}
+
+.inner {
+    position: absolute;
+    background: #240f52;;
+    width: 23vh;
+    height: 23vh;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.span-text{
+    cursor: pointer;
+}
+
+.inner span{
+    font-size: 4.2vh;
+    font-weight: 800;
+    color: transparent;
+    background: linear-gradient(135deg, #FEED07 0%, #FE6A50 5%, #ED00AA 15%, #2FE3FE 50%, #8900FF 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+}
+
+@keyframes spinOuter{
+    to{
+        transform: rotate(360deg);
+    }
+}
